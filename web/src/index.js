@@ -1,3 +1,6 @@
+/*
+ * Copyright (c) 2021 Karl Li. All rights reserved.
+ */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';

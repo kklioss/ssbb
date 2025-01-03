@@ -1,3 +1,6 @@
+/*
+ * Copyright (c) 2021 Karl Li. All rights reserved.
+ */
 import React from 'react';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';

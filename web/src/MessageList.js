@@ -1,3 +1,6 @@
+/*
+ * Copyright (c) 2021 Karl Li. All rights reserved.
+ */
 import React from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import MessageCard from './MessageCard';

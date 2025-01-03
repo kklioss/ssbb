@@ -1,3 +1,6 @@
+/*
+ * Copyright (c) 2021 Karl Li. All rights reserved.
+ */
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';

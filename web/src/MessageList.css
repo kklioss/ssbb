@@ -1,4 +1,8 @@
-.Infinite-scroll {
+/*
+ * Copyright (c) 2021 Karl Li. All rights reserved.
+ */
+
+ .Infinite-scroll {
     height: 500px;
     overflow: 'auto';
     display: 'flex';

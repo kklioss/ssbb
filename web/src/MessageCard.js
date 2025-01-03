@@ -1,3 +1,6 @@
+/*
+ * Copyright (c) 2021 Karl Li. All rights reserved.
+ */
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Avatar from '@mui/material/Avatar';

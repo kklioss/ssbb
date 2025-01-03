@@ -1,3 +1,6 @@
+/*
+ * Copyright (c) 2021 Karl Li. All rights reserved.
+ */
 package edu.scarsdale
 
 import java.time.{Instant, LocalDate, ZoneId}
