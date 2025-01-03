@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scarsdale Schools Bulletin Board</title>
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="google-signin-client_id" content="1001543911144-64realdglo2q7knfrga7j52f1kcjp99h.apps.googleusercontent.com">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script>
+        function onSignIn(response) {
+            $.ajax({
+              type: 'POST',
+              url: '/login',
+              // Always include an `X-Requested-With` header in every AJAX request,
+              // to protect against CSRF attacks.
+              headers: {
+                'X-Requested-With': 'XMLHttpRequest'
+              },
+              contentType: 'application/octet-stream; charset=utf-8',
+              success: function(data, textStatus, xhr) {
+                // Redirect to home page.
+                // replace() removes the URL of the current document
+                // from the document history, meaning that it is not
+                // possible to use the "back" button to navigate back
+                // to the original document.
+                window.location.replace("/index.html");
+              },
+              error: function (data, textStatus, xhr) {
+                alert("Not a valid scarsdaleschools.org account.");
+              },
+              processData: false,
+              data: response.credential
+            });
+        }
+    </script>
+
+    <style type='text/css'>
+    .center {
+        margin: auto;
+        width: 60%;
+        padding: 10px;
+    }
+    #title {
+        font-family: sans-serif;
+        font-size: 32px;
+        color: maroon;
+        text-align: center;
+        padding: 15px 0;
+    }
+    #content {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        margin-top: -50px;
+        margin-left: -250px;
+        width: 500px;
+        height: 300px;
+    }
+    #login_button {
+        margin-top: 40px;
+        margin-left: 150px;
+    }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <div>
+            <a href="https://www.scarsdaleschools.k12.ny.us" title="Scarsdale Public Schools">
+                <img src="https://www.scarsdaleschools.k12.ny.us/cms/lib/NY01001205/Centricity/Template/4//images/scarsdale-logo.png" alt="Scarsdale Schools logo", style="float: left;">
+            </a>
+            <h1 id="title">Scarsdale Schools Bulletin Board</h1>
+        </div>
+
+        <div id="login_button">
+            <div id="g_id_onload"
+                 data-client_id="1001543911144-64realdglo2q7knfrga7j52f1kcjp99h.apps.googleusercontent.com"
+                 data-context="signin"
+                 data-ux_mode="popup"
+                data-callback="onSignIn">
+            </div>
+
+          <div class="g_id_signin"
+                data-type="standard"
+                data-shape="rectangular"
+               data-theme="outline"
+               data-text="signin_with"
+              data-size="large"
+                 data-logo_alignment="left">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

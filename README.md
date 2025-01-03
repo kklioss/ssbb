@@ -1,2 +1,1 @@
-# ssbb
-Scarsdale Schools Bulletin Board
+# Scarsdale Schools Bulletin Board

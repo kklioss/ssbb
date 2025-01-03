@@ -1,0 +1,13 @@
+.Infinite-scroll {
+    height: 500px;
+    overflow: 'auto';
+    display: 'flex';
+    flex-direction: 'column-reverse';
+}
+
+.Message-card {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
